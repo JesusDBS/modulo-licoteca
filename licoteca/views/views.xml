@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="licoteca_drink_list">
+      <field name="name">licoteca Drink List</field>
+      <field name="model">licoteca.drink</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="alcohol_degree"/>
+          <field name="type"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="action_licoteca_drink">
+      <field name="name">licoteca Drink</field>
+      <field name="res_model">licoteca.drink</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="licoteca.action_server">
+      <field name="name">licoteca server</field>
+      <field name="model_id" ref="model_licoteca_licoteca"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+
+    <menuitem name="licoteca" id="licoteca.menu_root"/>
+
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="licoteca.menu_1" parent="licoteca.menu_root"/>
+    <menuitem name="Menu 2" id="licoteca.menu_2" parent="licoteca.menu_root"/>
+-->
+    <!-- actions -->
+
+    <menuitem name="Drink list" id="licoteca_drink_menu" parent="licoteca.menu_root"
+              action="action_licoteca_drink"/>
+    <!-- <menuitem name="Server to list" id="licoteca" parent="licoteca.menu_2"
+              action="licoteca.action_server"/> -->
+
+  </data>
+</odoo>

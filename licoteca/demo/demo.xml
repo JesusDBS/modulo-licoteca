@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+
+          <record id="licoteca_vino" model="licoteca.drink">
+            <field name="name">Vino</field>
+            <field name="alcohol_degree">4.5</field>
+            <field name="type">fermentada</field>
+          </record>
+
+          <record id="licoteca_cerveza" model="licoteca.drink">
+            <field name="name">Cerveza</field>
+            <field name="alcohol_degree">5</field>
+            <field name="type">fermentada</field>
+          </record>
+
+          <record id="licoteca_whisky" model="licoteca.drink">
+            <field name="name">Whisky</field>
+            <field name="alcohol_degree">50</field>
+            <field name="type">destilada</field>
+          </record>
+
+          <record id="licoteca_ron" model="licoteca.drink">
+            <field name="name">Ron</field>
+            <field name="alcohol_degree">45</field>
+            <field name="type">destilada</field>
+          </record>
+
+    </data>
+</odoo>
